@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Mobile AAp</title>
+
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="Content/jquery.mobile-1.4.5.min.css">
+
+    <!-- Include the jQuery library -->
+    <script src="Content/jquery-1.11.3.min.js"></script>
+
+    <!-- Include the jQuery Mobile library -->
+    <script src="Content/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="Content/bootstrap.min.css" />
+    <script src="Content/jquery.min.js"></script>
+    <script src="Content/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="index.html" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+                    <li><a href="Menu1.html" class="ui-btn ui-icon-grid ui-btn-icon-left">Menu</a></li>
+                    <li><a href="#login" data-transition="pop" class="ui-btn ui-icon-action ui-btn-icon-left">Login</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div data-role="main" class="ui-content">
+
+
+
+            <label for="Quality">Food Quality</label>
+            <input type="range" name="Quality" id="Quality" value="50" min="0" max="100">
+            <label for="Service">Service Delivery</label>
+            <input type="range" name="Service" id="Service" value="50" min="0" max="100">
+            <label for="Satisfied">Are You Satisfied</label>
+            <input type="checkbox" data-role="flipswitch" name="Satisfied" id="Satisfied" data-on-text="YES" data-off-text="NO">
+            <a href="index.html" class="ui-btn ui-btn-inline ui-btn-b ui-shadow ui-corner-all ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini" data-rel="back">Submit</a>
+
+
+        </div>
+        <div data-role="footer">
+
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="About.html" class="ui-btn ui-icon-home ui-btn-icon-left">About</a></li>
+                    <li><a href="Contact.html" class="ui-btn ui-icon-grid ui-btn-icon-left">Contact</a></li>
+                    <li><a href="Feedback.html" class="ui-btn ui-icon-action ui-btn-icon-left">Feedback</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div data-role="page" id="download" data-dialog="true">
+        <div data-role="main" class="ui-content">
+            <form method="post" action="/Home/Order">
+                <input type="hidden" id="productname" name="productname" />
+                <div class="ui-field-contain">
+                    <label for="fullname">Full name:</label>
+                    <input type="text" name="fullname" id="fullname">
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" name="phone" required id="phone">
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Your email..">
+                </div>
+                <a href="#" class="ui-btn ui-btn-inline ui-btn-b ui-shadow ui-corner-all ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini" data-rel="back">Order</a>
+                <a href="#" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-inline ui-mini" data-rel="back">Cancel</a>
+
+            </form>
+
+
+
+        </div>
+    </div>
+
+
+    <div data-role="page" id="login" data-dialog="true">
+        <div data-role="main" class="ui-content">
+
+
+            <input type="hidden" id="productname" name="productname" />
+            <div class="ui-field-contain">
+                <label for="Username">Username</label>
+                <input type="text" name="Username" id="Username">
+
+                <label for="Password">Password</label>
+                <input type="password" name="Password" required id="Password">
+            </div>
+            <a href="#" class="ui-btn ui-btn-inline ui-btn-b ui-shadow ui-corner-all ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini" data-rel="back">Login</a>
+            <a href="#" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-inline ui-mini" data-rel="back">Cancel</a>
+
+
+
+
+
+        </div>
+    </div>
+</body>
+</html>
